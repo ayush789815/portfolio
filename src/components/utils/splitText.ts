@@ -11,6 +11,12 @@ interface ParaElement extends HTMLElement {
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 export default function setSplitText() {
+  // Check if we're in development environment (localhost)
+  const isDev = window.location.hostname === "localhost" || 
+                window.location.hostname === "127.0.0.1";
+  
+  if (!isDev) return; // Only run this in development
+  
   ScrollTrigger.config({ ignoreMobileResize: true });
   if (window.innerWidth < 900) return;
   const paras: NodeListOf<ParaElement> = document.querySelectorAll(".para");
