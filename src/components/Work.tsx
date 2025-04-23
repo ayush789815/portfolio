@@ -3,7 +3,6 @@ import WorkImage from "./WorkImage";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import React from "react";
 import exclusive from "../assets/exclusive.png"
 import resume from '../assets/resume.png'
 import osumare from '../assets/osumare.png'
